@@ -1,10 +1,10 @@
 cleanup_cache() {
+  rm -rf $cache_dir/phoenix-static
   if [ $clean_cache = true ]; then
     info "clean_cache option set to true."
     info "Cleaning out cache contents"
     rm -rf $cache_dir/npm-version
     rm -rf $cache_dir/node-version
-    rm -rf $cache_dir/phoenix-static
     rm -rf $cache_dir/yarn-cache
     rm -rf $cache_dir/node_modules
     cleanup_old_node
